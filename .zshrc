@@ -92,6 +92,7 @@ alias glg2s="git lg2-specific"
 alias glg3s="git lg3-specific"
 
 # workflow-specific git aliases
+alias gt="git tag"
 alias gmn="gm --no-ff"
 alias gmnd="gmn develop"
 alias gpat="gp --all && gp --tags"
