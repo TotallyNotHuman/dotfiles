@@ -72,7 +72,7 @@ source $ZSH/oh-my-zsh.sh
 # custom configuration
 
 # terminal sanity check
-if [ "$TERM" = "linux" ]; then
+if [ "$TERM" != "xterm-256color" ]; then
 	PS1="%F{green}%n%f@%F{green}%M%f %B%F{blue}%~%b %B%F{green}%# %f%F{white}"
 fi
 
@@ -101,8 +101,9 @@ alias gpat="gp --all && gp --tags"
 alias nv="nordvpn"
 alias nvc="nv c"
 alias nvd="nv d"
+alias nvs="nv status"
 
-# ksp stop/cont aliases
+# ksp SIGSTOP/CONT aliases
 alias sksp="pkill -STOP KSP"
 alias cksp="pkill -CONT KSP"
 
@@ -124,10 +125,4 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export ANDROID_HOME="/home/tnh/Android/Sdk"
 
 # one PATH to rule them all
-export PATH="/home/tnh/.cargo/bin:/home/tnh/.local/bin:/home/tnh/perl5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/tnh/.dotnet/tools:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/usr/local/bin/processing-3.4:/home/tnh/Android/Sdk/tools:/home/tnh/Android/Sdk/platform-tools"
-
-# perl path shite
-PERL5LIB="/home/tnh/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/tnh/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/tnh/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/tnh/perl5"; export PERL_MM_OPT;
+export PATH="/home/tnh/.cargo/bin:/home/tnh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/tnh/.dotnet/tools:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/usr/local/bin/processing-3.4:/home/tnh/Android/Sdk/tools:/home/tnh/Android/Sdk/platform-tools"
