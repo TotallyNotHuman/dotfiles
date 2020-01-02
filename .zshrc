@@ -62,7 +62,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(chucknorris common-aliases debian encode64 extract git history sudo systemd vscode)
+plugins=(common-aliases debian extract git history npm sudo systemd vscode)
 
 # disable completion verification stuff
 ZSH_DISABLE_COMPFIX=true
