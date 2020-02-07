@@ -94,7 +94,9 @@ alias glg3s="git lg3-specific"
 # workflow-specific git aliases
 alias gmn="gm --no-ff"
 alias gmnd="gmn develop"
-alias gpat="gp --all && gp --tags"
+alias gpa="gp --all"
+alias gpt="gp --tags"
+alias gpat="gpa && gpt"
 alias gpen="git prune --expire=now"
 alias gpend="gpen --dry-run"
 alias gstam="gsta -m"
@@ -115,11 +117,13 @@ alias psn="sudo prime-select nvidia && sudo reboot"
 alias psi="sudo prime-select intel && sudo reboot"
 alias psq="prime-select query"
 
+# apt autoremove
+alias aar="sudo $apt_pref autoremove"
+
 # global variables
 
-# all hail vim/aptitude
+# all hail vim
 export EDITOR='vim'
-export apt_pref='aptitude'
 
 # ssh key path
 export SSH_KEY_PATH="~/.ssh/rsa_id"
